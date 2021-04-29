@@ -12,7 +12,7 @@ local function chars(str)
   return iter, str, 0
 end
 
-kata.roman_Decoder = function(roman) 
+solution.roman_Decoder = function(roman) 
   local symbols = {["I"] = 1, ["V"] = 5, ["X"] = 10, ["L"] = 50, ["C"] = 100, ["D"] = 500, ["M"] = 1000}
   local value, previous = 0, nil;
   for i, c in chars(roman:reverse()) do
@@ -30,4 +30,4 @@ kata.roman_Decoder = function(roman)
   return value
 end
 
-return kata
+return solution
